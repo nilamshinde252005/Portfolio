@@ -1,0 +1,50 @@
+:root {
+  font-family: monospace;
+  background: #0a192f; /* same as hero background */
+}
+
+.navbar {
+  font-size: 1.3rem;
+  margin-top: 1.5%;
+  display: flex;
+  justify-content: space-between; /* pushes links and socials apart */
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #0a192f; /* same as hero background */
+  color: #ccd6f6;     /* same body text color */
+  position: sticky;
+  top: 0;
+  z-index: 100;       /* make sure navbar stays above */
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-right: 2%;
+  color: pink; /* logo accent color */
+}
+
+.nav-links,
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem; /* spacing between items inside each ul */
+}
+
+.nav-links a,
+.social-links a {
+  text-decoration: none;
+  color: #ccd6f6; /* muted light blue-gray text */
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.social-links a {
+  font-size: 1.5rem; /* make icons bigger */
+}
+
+/* Hover effect using your accent colors */
+.nav-links a:hover,
+.social-links a:hover {
+  color: pink; /* same pink as name + button border */
+}
