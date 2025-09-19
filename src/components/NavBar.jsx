@@ -10,7 +10,7 @@ export default function NavBar() {
             {/* Page Links */}
             <ul className="nav-links" style={{ marginLeft: "8%" }}>
                 <div className="logo">Nilam</div>
-                <li><a href="#home">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#experiences">Experiences</a></li>
                 <li><a href="#projects">Projects</a></li>

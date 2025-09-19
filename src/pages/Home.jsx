@@ -6,14 +6,15 @@ import Experiences from "./Experiences";
 import Projects from "./Projects";
 import { ReactTyped } from "react-typed";
 import Footer from "../components/Footer";
+import cosmos from "../assets/cosmos2.gif";
 
 export default function Home() {
     return (
-        <main>
+        <main style={{backgroundColor:"#0a192f"}}>
             <section id="home">
                 <header className="hero">
                     <img
-                        src="/public/Cosmos (2).gif"
+                        src={cosmos}
                         alt="Animated graphic"
                         className="hero-gif"
                     />

@@ -1,3 +1,4 @@
+// App.jsx
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
@@ -9,9 +10,10 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <Router>
+    // <-- add basename="/Portfolio/"
+    <Router basename="/Portfolio/">
       <NavBar />
-      <div className="content">
+      <div className="content" style={{backgroundColor:"#0a192f"}}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -19,6 +21,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
         </Routes>
       </div>
+
     </Router>
   );
 }
