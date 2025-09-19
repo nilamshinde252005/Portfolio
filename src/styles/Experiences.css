@@ -112,3 +112,178 @@
       flex: 0 0 auto;
     }
   }
+
+
+
+  /* -----------------------------
+   Responsive additions (append)
+   ----------------------------- */
+
+/* Large tablets / small laptops */
+@media (max-width: 1024px) {
+  .experiences-section {
+    margin-left: 8%;
+    margin-right: 8%;
+    padding: 2.2rem 1.6rem;
+    font-size: 18px;
+    margin-bottom: 7%;
+  }
+
+  .h1 {
+    font-size: 1.9rem;
+  }
+
+  .experiences-container {
+    gap: 1.5rem;
+  }
+
+  .exp-list {
+    width: 240px;
+  }
+
+  .exp-btn {
+    padding: 0.7rem 0.9rem;
+    font-size: 0.98rem;
+  }
+
+  .exp-details {
+    padding: 0.9rem;
+  }
+
+  .exp-headline {
+    font-size: 1.1rem;
+  }
+
+  .tech-pill {
+    padding: 0.2rem 0.5rem;
+    margin-top: 2%;
+  }
+}
+
+/* Tablets / large phones */
+@media (max-width: 768px) {
+  .experiences-section {
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 1.8rem 1.2rem;
+    font-size: 16px;
+    margin-bottom: 6%;
+  }
+
+  .h1 {
+    font-size: 1.6rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .experiences-container {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  /* Make the left list horizontal and scrollable to save vertical space */
+  .exp-list {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+    margin-top: 0;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .exp-btn {
+    min-width: 140px;
+    flex: 0 0 auto;
+    padding: 0.65rem 0.9rem;
+    border-radius: 8px;
+  }
+
+  .exp-details {
+    margin-top: 0;
+    padding: 0.9rem;
+  }
+
+  .exp-headline {
+    font-size: 1.05rem;
+  }
+
+  .exp-meta {
+    font-size: 0.95rem;
+  }
+
+  .exp-bullets {
+    font-size: 0.95rem;
+  }
+
+  .tech-pill {
+    font-size: 0.9rem;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .experiences-section {
+    margin-left: 3%;
+    margin-right: 3%;
+    padding: 1.2rem 0.9rem;
+    font-size: 14.5px;
+    margin-bottom: 5%;
+  }
+
+  .h1 {
+    font-size: 1.25rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .experiences-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .exp-list {
+    width: 100%;
+    flex-direction: row;
+    gap: 0.5rem;
+    overflow-x: auto;
+    margin-top: 0.5rem;
+    padding-bottom: 0.4rem;
+  }
+
+  .exp-btn {
+    min-width: 120px;
+    padding: 0.55rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .exp-details {
+    padding: 0.75rem;
+  }
+
+  .exp-headline {
+    font-size: 1rem;
+  }
+
+  .exp-meta {
+    font-size: 0.9rem;
+  }
+
+  .exp-bullets {
+    font-size: 0.9rem;
+    margin-left: 0.9rem;
+  }
+
+  .tech-pill {
+    padding: 0.18rem 0.45rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* Keep scrollbars unobtrusive across small viewports */
+.exp-list::-webkit-scrollbar {
+  height: 8px;
+}
+.exp-list::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.08);
+  border-radius: 8px;
+}

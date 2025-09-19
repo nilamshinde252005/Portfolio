@@ -62,3 +62,93 @@
     background-color: #112f5d;
   }
   
+
+  /* -----------------------------
+   Responsive additions (append)
+   ----------------------------- */
+
+/* Large tablets / small laptops */
+@media (max-width: 1024px) {
+  .h1 {
+    font-size: 1.8rem;
+  }
+
+  .projects-grid {
+    gap: 1.5rem;
+    justify-content: center; /* center cards when wrapping */
+  }
+
+  .project-card {
+    flex: 1 1 260px;
+    max-width: 320px;
+    padding: 1.25rem;
+  }
+
+  .project-card strong {
+    margin-bottom: 1.4rem;
+  }
+}
+
+/* Tablets / large phones */
+@media (max-width: 768px) {
+  .h1 {
+    font-size: 1.6rem;
+    margin-bottom: 1.4rem;
+  }
+
+  .projects-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 7%;
+  }
+
+  .project-card {
+    width: 90%;
+    max-width: 400px;
+    padding: 1.2rem;
+  }
+
+  .project-card strong {
+    font-size: 1.05rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .project-card p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .h1 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .projects-grid {
+    margin-top: 6%;
+    gap: 1rem;
+  }
+
+  .project-card {
+    width: 100%;
+    max-width: none;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  .project-card strong {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .project-card p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .project-card a {
+    font-size: 0.9rem;
+  }
+}
