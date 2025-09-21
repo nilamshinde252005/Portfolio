@@ -9,8 +9,8 @@ export default function NavBar() {
 
             {/* Page Links */}
             <ul className="nav-links" style={{ marginLeft: "8%" }}>
-                <div className="logo">Nilam</div>
-                <li><a href="/Portfolio/#home">Home</a></li>
+                <div className="logo">Dia</div>
+                <li><a href="/Portfolio2/#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#experiences">Experiences</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -18,18 +18,14 @@ export default function NavBar() {
 
             {/* Social Links */}
             <ul className="social-links" style={{ marginRight: "8%" }}>
+                
                 <li>
-                    <a href="https://github.com/nilamshinde252005" target="_blank" rel="noopener noreferrer">
-                        <FaGithub />
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/nilam-shinde-b91936279" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/in/dia-wagle/" target="_blank" rel="noopener noreferrer">
                         <FaLinkedin />
                     </a>
                 </li>
                 <li>
-                    <a href="mailto:nilamshinde252005@gmail.com">
+                    <a href="mailto:dia.wagle@gmail.com">
                         <FaEnvelope />
                     </a>
                 </li>

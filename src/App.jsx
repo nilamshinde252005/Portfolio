@@ -11,9 +11,9 @@ import Footer from "./components/Footer";
 function App() {
   return (
     // <-- add basename="/Portfolio/"
-    <Router basename="/Portfolio/">
+    <Router basename="/Portfolio2/">
       <NavBar />
-      <div className="content" style={{backgroundColor:"#0a192f"}}>
+      <div className="content" >
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

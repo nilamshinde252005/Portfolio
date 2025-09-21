@@ -8,37 +8,41 @@ export default function About() {
             <section id="about">
                 <main className="main">
 
-                    <p className="h1"> <strong style={{ color: "pink" }}>/ About me ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯</strong>  </p>
+                    <p className="h1"> <strong >/ About me ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯</strong>  </p>
 
                     <div className="tech-section">
                         <div className="left-col">
 
                             <p style={{ lineHeight: "1.5", marginBottom: "1.5rem" }}>
-                                I am currently pursuing a Bachelor’s in Computer Science at 
-                                <strong style={{ color: "#21edb7" }}> University of Westminster,</strong>
-                                while building experience on projects involving React, Node.js, Express, and REST APIs.
-                                I’ve also been expanding my knowledge through a Full-Stack Web Development Bootcamp at 
-                                <strong style={{ color: "#21edb7" }}> University of Edinburgh.</strong>
+                                I am currently pursuing a <strong >BA (Hons) in Business Management (Entrepreneurship) </strong>
+                                at the <strong >University of Westminster,</strong> where I combine academic excellence
+                                with real-world leadership experience. I’ve led initiatives that improved student performance metrics by 20%,
+                                designed impact-driven business strategies for international clients, and represented my peers as a
+                                <strong > School Representative. </strong>
+                                My journey so far reflects a passion for <em>leadership, strategy, and data</em> that creates measurable change.
                             </p>
 
-                            <p>Here are some technologies I have been working with:</p>
-
+                            <p>Here are some of the areas I have been making an impact in:</p>
 
                             <div className="languages">
                                 <ul className="ul">
-                                    <li>React.js</li>
-                                    <li>JavaScript</li>
-                                    <li>C++</li>
+                                    <p>Soft skills</p>
+                                    <li>Leadership & Team Management</li>
+                                    <li>Stakeholder Engagement & Communication</li>
+                                    <li>Problem-Solving & Strategic Thinking</li>
+                                    <li>Collaboration & Cross-Cultural Teamwork</li>
+                                    <li>Resilience & Adaptability</li>
                                 </ul>
 
                                 <ul className="ul">
-                                    <li>PHP (basic)</li>
-                                    <li>Python</li>
-                                    <li>TypeScript (basic)</li>
+                                    <p>Hard skills</p>
+                                    <li>Financial & Business Modelling (Forecasting, Valuation, Reporting)</li>
+                                    <li>Data Analysis & Quantitative Research (Excel, Smart Survey)</li>
+                                    <li>Project Management</li><li>Digital Strategy & Marketing</li>
                                 </ul>
                             </div>
+
                         </div>
-                        <img src="/vite.svg" alt="Portfolio Icon" />
                     </div>
 
 

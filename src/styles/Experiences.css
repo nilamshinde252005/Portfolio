@@ -1,289 +1,229 @@
+/* Experiences — Black & White / Metallic aesthetic (no :root vars) */
+
 .h1 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    font-weight: 600;
-    color: pink; /* section heading accent */
-  }
-  
-  .experiences-section {
-    font-size: 20px;
-    margin-left: 15%;
-    margin-right: 15%;
-    padding: 3rem 2rem;
-    background-color: #0a192f; /* dark navy background */
-    color: #ccd6f6; /* light text */
-    border-radius: 12px;margin-bottom: 9%;
-  }
-  
-  /* two-column layout */
-  .experiences-container {
-    display: flex;
-    gap: 2rem;
-  }
-  
-  /* left list */
-  .exp-list {
-    margin-top: 7%;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;    
-    width: 280px; 
-  }
-  
-  .exp-btn {
-    text-align: left; 
-    padding: 0.8rem 1rem;
-    border: 1px solid transparent;
-    background: transparent;
-    cursor: pointer;
-    border-radius: 8px;
-    color: #ccd6f6; /* default text */
-    transition: background 0.2s, border-color 0.2s, color 0.2s;
-  }
-  
-  .exp-btn:hover,
-  .exp-btn:focus {    
-    background: #112240; /* slightly lighter navy */
-    outline: none;
-    border-color: pink; /* hover border */
-    color: pink; /* hover text */
-  }
-  
-  .exp-btn.active {
-    background: #112240;
-    border-color: #21edb7; /* mint highlight */
-    color: #21edb7;
-  }
-  
-  /* right details */
-  .exp-details {
-    flex: 1;
-    padding: 1rem;
-    border-radius: 8px;  
-    margin-top: 5%;
-  }
-  
-  .exp-headline {
-    margin: 0 0 0.25rem 0;
-    color: #ffffff; /* white heading */
-  }
-  
-  .exp-meta {
-    color: #8892b0; /* muted gray-blue */
-    margin-bottom: 1rem;
-  }
-  
-  .exp-bullets {
-    margin: 0 0 1rem 1.1rem;
-    color: #ccd6f6; /* light text */  
-  }
-  
-  .exp-bullets li::marker {
-    color: #21edb7; /* mint bullet marker */ 
-  }
-  
-  .tech-pill {
-    margin-top: 3%;
-    display: inline-block;
-    background: rgba(255, 192, 203, 0.15); /* soft pink tint */
-    padding: 0.25rem 0.6rem;
-    border-radius: 999px;
-    margin-right: 0.5rem;
-    margin-bottom: 0.5rem;
-    color: pink;
-  }
-  
-  /* responsive: stack columns on mobile */
-  @media (max-width: 760px) {
-    .experiences-container {
-      flex-direction: column;
-    }
-  
-    .exp-list {
-      width: 100%;
-      flex-direction: row;
-      overflow-x: auto;
-      gap: 0.75rem;
-      padding-bottom: 0.5rem;
-    }
-  
-    .exp-btn {
-      min-width: 160px;
-      flex: 0 0 auto;
-    }
-  }
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  color: #ffffff; /* strong white heading */
+}
 
+.experiences-section {
+  font-size: 16px;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 2.2rem 8rem;
+  background: linear-gradient(180deg, #0b0b0b 0%, #0f0f0f 100%); /* deep metallic base */
+  color: #efefef;
+  border-radius: 12px;
+  margin-bottom: 6%;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.7), inset 0 1px 0 rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.03);
+}
 
+/* header row */
+.experiences-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
 
-  /* -----------------------------
-   Responsive additions (append)
-   ----------------------------- */
+.hint {
+  color: #cfcfcf;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* two-column layout with divider */
+.experiences-container {
+  display: flex;
+  gap: 3.5rem;
+  align-items: flex-start;
+}
+
+/* left list (narrower) */
+.exp-list {
+  margin-top: 4%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 260px;
+  max-height: 480px;
+  overflow-y: auto;
+  padding-right: 6px; /* keeps content clear of scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.06) transparent;
+}
+
+/* list buttons */
+.exp-btn {
+  text-align: left;
+  padding: 0.8rem 0.9rem;
+  border: 1px solid transparent;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.00));
+  cursor: pointer;
+  border-radius: 8px;
+  color: #d7d7d7;
+  transition: background 0.18s ease, border-color 0.18s ease, transform 0.12s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* small meta on the buttons */
+.exp-mini-date {
+  font-size: 0.82rem;
+  color: #bfbfbf;
+}
+
+/* hover and focus */
+.exp-btn:hover,
+.exp-btn:focus {
+  background: linear-gradient(180deg, #101214, #0c1013);
+  outline: none;
+  transform: translateX(3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+}
+
+/* active button with left metallic accent */
+.exp-btn.active {
+  background: linear-gradient(90deg, rgba(255,255,255,0.03), rgba(0,0,0,0.02));
+  border-left: 4px solid #bfbfbf; /* silver accent */
+  color: #ffffff;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.6);
+}
+
+/* divider between list and details */
+.divider {
+  width: 1px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+  border-radius: 1px;
+  margin-top: 2%;
+}
+
+/* details panel */
+.exp-details {
+  flex: 1;
+  padding: 1.4rem;
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.015), rgba(0,0,0,0.02));
+  box-shadow: 0 10px 30px rgba(0,0,0,0.65);
+  min-height: 220px;
+  margin-top: 7%;
+  border: 1px solid rgba(255,255,255,0.02);
+}
+
+/* headline */
+.exp-headline {
+  margin: 0 0 0.25rem 0;
+  color: #ffffff;
+  font-size: 1.15rem;
+}
+
+.dash {
+  color: #bfbfbf;
+}
+
+.company-name {
+  color: #dcdcdc;
+  font-weight: 600;
+}
+
+/* meta */
+.exp-meta {
+  color: #bfbfbf;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+/* bullets */
+.exp-bullets {
+  margin: 0 0 1rem 1.25rem;
+  color: #dddede;
+  line-height: 1.6;
+  font-size: 0.98rem;
+}
+
+/* bullet marker color (metallic dot) */
+.exp-bullets li::marker {
+  color: #bfbfbf;
+  font-weight: 700;
+}
+
+/* tech pills — silver metallic */
+.tech-pill {
+  margin-top: 12px;
+  display: inline-block;
+  background: linear-gradient(180deg, #f6f6f6 0%, #dcdcdc 100%);
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #0b0b0b;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.6);
+}
+
+/* scrollbar styling (webkit) */
+.exp-list::-webkit-scrollbar {
+  width: 8px;
+}
+.exp-list::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.06);
+  border-radius: 8px;
+}
+
+/* responsive adjustments */
 
 /* Large tablets / small laptops */
 @media (max-width: 1024px) {
   .experiences-section {
     margin-left: 8%;
     margin-right: 8%;
-    padding: 2.2rem 1.6rem;
-    font-size: 18px;
-    margin-bottom: 7%;
+    padding: 1.8rem 1.2rem;
   }
-
-  .h1 {
-    font-size: 1.9rem;
-  }
-
-  .experiences-container {
-    gap: 1.5rem;
-  }
-
-  .exp-list {
-    width: 240px;
-  }
-
-  .exp-btn {
-    padding: 0.7rem 0.9rem;
-    font-size: 0.98rem;
-  }
-
-  .exp-details {
-    padding: 0.9rem;
-  }
-
-  .exp-headline {
-    font-size: 1.1rem;
-  }
-
-  .tech-pill {
-    padding: 0.2rem 0.5rem;
-    margin-top: 2%;
-  }
+  .exp-list { width: 220px; max-height: 420px; }
+  .exp-details { min-height: 200px; padding: 1rem; }
 }
 
 /* Tablets / large phones */
 @media (max-width: 768px) {
-  .experiences-section {
-    margin-left: 5%;
-    margin-right: 5%;
-    padding: 1.8rem 1.2rem;
-    font-size: 16px;
-    margin-bottom: 6%;
-  }
-
-  .h1 {
-    font-size: 1.6rem;
-    margin-bottom: 1.25rem;
-  }
-
   .experiences-container {
     flex-direction: column;
-    gap: 1.25rem;
   }
-
-  /* Make the left list horizontal and scrollable to save vertical space */
   .exp-list {
     width: 100%;
     display: flex;
     flex-direction: row;
     gap: 0.75rem;
-    margin-top: 0;
     overflow-x: auto;
     padding-bottom: 0.5rem;
-    -webkit-overflow-scrolling: touch;
+    max-height: none;
+    margin-top: 0;
   }
-
+  .divider { display: none; }
   .exp-btn {
     min-width: 140px;
     flex: 0 0 auto;
-    padding: 0.65rem 0.9rem;
-    border-radius: 8px;
+    border-left: 4px solid transparent;
   }
-
-  .exp-details {
-    margin-top: 0;
-    padding: 0.9rem;
-  }
-
-  .exp-headline {
-    font-size: 1.05rem;
-  }
-
-  .exp-meta {
-    font-size: 0.95rem;
-  }
-
-  .exp-bullets {
-    font-size: 0.95rem;
-  }
-
-  .tech-pill {
-    font-size: 0.9rem;
-  }
+  .exp-btn.active { border-left-color: #bfbfbf; transform: translateY(-2px); }
+  .exp-details { margin-top: 1rem; padding: 1rem; }
 }
 
 /* Small phones */
 @media (max-width: 480px) {
-  .experiences-section {
-    margin-left: 3%;
-    margin-right: 3%;
-    padding: 1.2rem 0.9rem;
-    font-size: 14.5px;
-    margin-bottom: 5%;
-  }
-
-  .h1 {
-    font-size: 1.25rem;
-    margin-bottom: 0.9rem;
-  }
-
-  .experiences-container {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .exp-list {
-    width: 100%;
-    flex-direction: row;
-    gap: 0.5rem;
-    overflow-x: auto;
-    margin-top: 0.5rem;
-    padding-bottom: 0.4rem;
-  }
-
-  .exp-btn {
-    min-width: 120px;
-    padding: 0.55rem 0.8rem;
-    font-size: 0.9rem;
-  }
-
-  .exp-details {
-    padding: 0.75rem;
-  }
-
-  .exp-headline {
-    font-size: 1rem;
-  }
-
-  .exp-meta {
-    font-size: 0.9rem;
-  }
-
-  .exp-bullets {
-    font-size: 0.9rem;
-    margin-left: 0.9rem;
-  }
-
-  .tech-pill {
-    padding: 0.18rem 0.45rem;
-    font-size: 0.85rem;
-  }
+  .experiences-section { margin-left: 3%; margin-right: 3%; padding: 1rem; }
+  .exp-btn { min-width: 120px; padding: 0.6rem 0.8rem; }
+  .exp-headline { font-size: 1rem; }
+  .exp-bullets { font-size: 0.92rem; margin-left: 0.9rem; }
+  .tech-pill { font-size: 0.85rem; padding: 0.28rem 0.45rem; }
 }
 
-/* Keep scrollbars unobtrusive across small viewports */
-.exp-list::-webkit-scrollbar {
-  height: 8px;
-}
-.exp-list::-webkit-scrollbar-thumb {
-  background: rgba(255,255,255,0.08);
-  border-radius: 8px;
+/* reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; transform: none !important; }
 }
